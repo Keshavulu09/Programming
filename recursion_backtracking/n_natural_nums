@@ -1,0 +1,13 @@
+#print 1 to n natural numbers
+class recursion:
+    def print_function(self, n):
+        if n > 0:
+            self.print_function(n-1)
+            print(n)
+if __name__ == "__main__":
+    n = 10
+    obj = recursion()
+    obj.print_function(n)
+    
+
+        
