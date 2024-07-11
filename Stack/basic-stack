@@ -1,0 +1,11 @@
+#Stack using collecctions deque 
+from collections import deque
+stack = deque()
+stack.append(20)
+stack.append(30)
+stack.append(32)
+stack.append(10)
+print(stack)
+print(stack.pop())
+print(stack.pop())
+print(stack)
