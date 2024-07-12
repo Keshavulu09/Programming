@@ -6,3 +6,9 @@ Counter: For counting elements.
 OrderedDict: For dictionaries that remember insertion order.
 defaultdict: For dictionaries with default values.
 ChainMap: For combining multiple mappings.
+
+
+Key Classes in queue Module
+Queue: This is a FIFO (first in, first out) queue.
+LifoQueue: This is a LIFO (last in, first out) queue, also known as a stack.
+PriorityQueue: This is a priority queue where entries are kept sorted and the lowest valued entry is retrieved first.
