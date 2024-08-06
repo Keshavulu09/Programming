@@ -1,0 +1,4 @@
+# graphv 
+v = int(input())
+
+    
