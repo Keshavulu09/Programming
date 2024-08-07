@@ -1,27 +1,28 @@
-from collections import deque
+v = 6
+ls = [[0,1],[1,2],[2,3],[4,0],[3,2],[4,1]]
+g = [[0 for _ in range(v)] for j in range(v)]
 
-def bfs_traversal(graph, source):
-    visited = set()
-    queue = deque([source])
-    visited.add(source)
+for s, d in ls:
+    g[s][d] = 1
+    g[d][s] = 1`
+
+for i in g:
+    print(i)
+
+def bfs(v, g):
+    queue = [0] 
+    vis = [0] * v  
+    vis[0] = 1  
+    ans = []
 
     while queue:
-        vertex = queue.popleft()
-        print(vertex, end=" ")
+        temp = queue.pop(0)  
+        ans.append(temp)
+        for i in range(v):
+            if g[temp][i] == 1 and not vis[i]:  
+                queue.append(i)
+                vis[i] = 1  
+    return ans
 
-        for neighbor in graph[vertex]:
-            if neighbor not in visited:
-                queue.append(neighbor)
-                visited.add(neighbor)
-
-# Example graph represented as an adjacency list
-graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['F'],
-    'D': [],
-    'E': [],
-    'F': []
-}
-
-bfs_traversal(graph, 'A')
+res = bfs(v, g)
+print(res)
